@@ -1,51 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop – Umm Zahra Boutique</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — Umm Zahra Boutique</title>
+  <meta name="description" content="Browse clothes for newborn to 16 years. Dresses, school uniforms, shoes, and accessories." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header class="header">
-    <h1 class="logo">Umm Zahra Boutique</h1>
-    <nav>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Umm Zahra Boutique</a>
+      <button class="nav-toggle" aria-label="Open navigation" id="navToggleShop">☰</button>
+      <nav class="nav" id="navShop">
         <a href="index.html">Home</a>
-        <a class="active" href="#">Shop</a>
+        <a class="active" href="shop.html">Shop</a>
         <a href="lookbook.html">Lookbook</a>
         <a href="order-delivery.html">Order & Delivery</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<section class="section">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-
-        <div class="product-card">
-            <div class="product-img"></div>
-            <h3>Product Name</h3>
-            <p>₦ Price</p>
-            <a class="btn" href="contact.html">Order</a>
-        </div>
-
-        <div class="product-card">
-            <div class="product-img"></div>
-            <h3>Product Name</h3>
-            <p>₦ Price</p>
-            <a class="btn" href="contact.html">Order</a>
-        </div>
-
-        <!-- Add more as needed -->
-
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<footer class="footer">
-    <p>© 2025 Umm Zahra Boutique</p>
-</footer>
+  <main>
+    <section class="wrap section">
+      <h1>Shop</h1>
+      <p class="muted">Tap an item to order via WhatsApp or copy details to place your order.</p>
 
+      <div class="product-grid full">
+        <!-- Repeat product cards and add images -->
+        <article class="product">
+          <div class="product-thumb"></div>
+          <h4>Pink Dress (2-3 yrs)</h4>
+          <p class="price">₦2,800</p>
+          <div class="product-actions">
+            <a class="btn small" href="https://api.whatsapp.com/send?phone=2349017254986&text=I%20want%20to%20order%20Pink%20Dress">Order</a>
+            <a class="btn small outline" href="#">Details</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-thumb"></div>
+          <h4>Boy's Shirt + Trouser</h4>
+          <p class="price">₦3,500</p>
+          <div class="product-actions">
+            <a class="btn small" href="https://api.whatsapp.com/send?phone=2349017254986&text=I%20want%20to%20order%20Boy%20Set">Order</a>
+            <a class="btn small outline" href="#">Details</a>
+          </div>
+        </article>
+
+        <!-- Add more -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 Umm Zahra Boutique</small>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://api.whatsapp.com/send?phone=2349017254986&text=Hello%20Umm%20Zahra%20Boutique!" target="_blank">💬</a>
+
+  <script src="script.js"></script>
 </body>
-</html>
+    </html>
