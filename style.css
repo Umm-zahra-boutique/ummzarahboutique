@@ -1,129 +1,58 @@
 :root{
-  --bg:#fff;
-  --muted:#6b6b6b;
   --accent:#7a3efd;
-  --accent-dark:#5b27c7;
-  --card:#fff;
-  --radius:12px;
+  --muted:#6b6b6b;
+  --bg:#fff;
   --max-width:1100px;
   --wrap-padding:16px;
+  --radius:12px;
 }
 
-/* Base */
 *{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#222}
+html,body{height:100%;margin:0;font-family:Poppins,system-ui,Arial;background:#fafafa;color:#222}
 .wrap{max-width:var(--max-width);margin:0 auto;padding:0 var(--wrap-padding)}
-
-/* Header */
-.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:30}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:18px}
+.brand{font-weight:800;color:var(--accent);text-decoration:none;font-size:18px}
 .nav{display:flex;gap:12px;align-items:center}
-.nav a{color:#333;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:500}
+.nav a{color:#333;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
 .nav a.active, .nav a:hover{color:var(--accent)}
-.cta{border:1px solid var(--accent);padding:8px 12px;border-radius:8px}
+.cart-btn{background:#fff;border:1px solid #eee;padding:8px 10px;border-radius:8px;font-weight:700}
 
-/* Mobile nav toggle */
-.nav-toggle{display:none;background:none;border:0;font-size:18px}
+/* Hero & features */
+.hero{background:linear-gradient(180deg,#f7f2ff,white);padding:36px 0;text-align:center}
+.lead{color:var(--muted);margin:8px 0}
 
-/* Hero */
-.hero{background:linear-gradient(180deg,#f7f2ff,white);padding:48px 0;text-align:center}
-.hero h1{font-size:26px;margin:0 0 8px}
-.hero .lead{color:var(--muted);margin-bottom:16px}
-.hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block}
-.btn.outline{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.btn.small{padding:8px 12px;font-size:14px}
-.btn.primary{background:var(--accent);border:1px solid var(--accent)}
+/* Product grid */
+.section{padding:24px 0}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.product{background:var(--bg);padding:12px;border-radius:12px;box-shadow:0 6px 20px rgba(16,8,60,0.04)}
+.product-thumb{height:160px;background:#eee;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:#999}
+.product h4{margin:6px 0 2px}
+.price{color:var(--accent);font-weight:800}
 
-/* Layout */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:30px 0}
-.feature{background:linear-gradient(180deg,#fff,#fbf9ff);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(16,8,60,0.03)}
+/* Buttons */
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block;font-weight:700}
+.btn.outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
 
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:18px}
-.product{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(16,8,60,0.04);text-align:left}
-.product-thumb{height:140px;background:#eee;border-radius:10px;margin-bottom:8px}
-.price{color:var(--accent);font-weight:700;margin:8px 0}
-.product-actions{display:flex;gap:8px}
+/* Modal */
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:60;opacity:0;pointer-events:none;transition:opacity .18s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-content{width:92%;max-width:760px;background:#fff;border-radius:12px;padding:18px;position:relative}
+.modal-close{position:absolute;right:12px;top:10px;border:0;background:none;font-size:20px}
 
-/* Gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
-.gallery-item{height:140px;background:#eee;border-radius:10px}
-
-/* Contact cards */
-.contact-top .contact-cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
-.card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,8,60,0.04)}
-.contact-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-
-/* Contact details + icons */
-.contact-item{display:flex;gap:12px;align-items:center;margin:10px 0}
-.icon{width:36px;height:36px;flex:0 0 36px;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:#f5f3ff}
-.contact-item a{color:inherit;text-decoration:none;font-weight:600}
-.muted{color:var(--muted)}
-
-/* Map */
-.map-wrap{margin-top:12px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(10,10,30,0.06)}
-.map-wrap iframe{width:100%;height:240px;border:0;display:block}
-
-/* Message form */
-.message-form input, .message-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #e5e5e5;margin-bottom:10px;font-size:15px}
-.message-form button{width:100%;padding:12px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700}
-
-/* Links page */
-.links-page .links-card{max-width:420px;margin:40px auto;padding:24px;border-radius:14px;background:#fff;text-align:center;box-shadow:0 10px 30px rgba(10,10,30,0.06)}
-.link-btn{display:block;text-decoration:none;background:var(--accent);color:#fff;padding:12px;border-radius:10px;margin:10px 0;font-weight:600}
-
-/* Footer */
-.site-footer{border-top:1px solid #eee;padding:18px 0;margin-top:30px;background:transparent}
-.site-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+/* Cart drawer */
+.cart-drawer{position:fixed;right:0;top:0;height:100vh;width:360px;max-width:92%;background:#fff;box-shadow:-10px 0 30px rgba(0,0,0,0.12);transform:translateX(110%);transition:transform .25s ease;z-index:70;padding:18px;overflow:auto}
+.cart-drawer.open{transform:translateX(0)}
+.cart-item{display:flex;gap:10px;align-items:center;padding:10px;border-bottom:1px solid #f1f1f1}
+.cart-thumb{width:64px;height:64px;background:#eee;border-radius:8px;flex:0 0 64px}
+.qty-controls{display:flex;gap:8px;align-items:center}
 .small{font-size:13px;color:var(--muted)}
+.total-row{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-weight:800}
 
-/* WhatsApp floating button */
-.whatsapp-fab{position:fixed;right:14px;bottom:86px;background:#25D366;color:white;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 8px 20px rgba(0,0,0,0.12);z-index:40}
+/* WhatsApp floating */
+.whatsapp-fab{position:fixed;right:16px;bottom:18px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:80;box-shadow:0 8px 20px rgba(0,0,0,0.12)}
 
-/* Mobile bottom bar */
-.mobile-bottom-bar{
-  position:fixed;
-  left:12px;
-  right:12px;
-  bottom:12px;
-  height:62px;
-  background:linear-gradient(90deg,#ffffff, #fff);
-  border-radius:40px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  justify-content:space-around;
-  padding:8px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
-  z-index:45;
-  transition:transform .25s ease,opacity .25s ease;
-}
-.mobile-bottom-bar .mb-btn{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  background:#fff;
-  border-radius:10px;
-  padding:8px 10px;
-  text-decoration:none;
-  color:#111;
-  font-weight:700;
-  border:1px solid #eee;
-}
-.mb-icon{width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:16px}
-
-/* small screens: hide desktop nav & show bottom bar */
+/* Responsive nav for small screens */
 @media (max-width:800px){
-  .nav{display:none;position:fixed;left:0;right:0;top:60px;background:white;flex-direction:column;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-  .nav-toggle{display:block}
-  .header-inner{gap:10px}
-  .hero h1{font-size:22px}
-  .contact-top .contact-cards{grid-template-columns:1fr}
-  .mobile-bottom-bar{display:flex}
-}
-
-/* large screens: hide mobile bottom bar and whatsapp bubble is enough */
-@media (min-width:801px){
-  .mobile-bottom-bar{display:none}
-    }
+  .nav{display:none}
+           }
