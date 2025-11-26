@@ -1,107 +1,127 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Umm Zahra Boutique — Kids Fashion in Katsina</title>
-  <meta name="description" content="Umm Zahra Boutique — Modest & stylish kids clothing in Katsina. Outfits for newborn-16yrs, shoes & accessories. Order via WhatsApp." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umm Zahra Boutique</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fdf7ff;
+      color: #333;
+    }/* Header */
+header {
+  background: #ff4fb0;
+  color: #fff;
+  padding: 18px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  text-align: center;
+  background: #ffe3f2;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #b80066;
+}
+
+/* Sections */
+.section {
+  padding: 22px;
+  background: #ffffff;
+  margin: 15px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* CTA Floating Button */
+.floating-cta {
+  position: fixed;
+  bottom: 85px;
+  right: 18px;
+  background: #25D366;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 9999;
+}
+
+/* Bottom Floating Menu */
+.mobile-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+}
+
+.mobile-bottom-bar a {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mobile-bottom-bar img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+iframe {
+  width: 100%;
+  height: 260px;
+  border: none;
+  border-radius: 10px;
+}
+
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html">Umm Zahra Boutique</a>
-      <button class="nav-toggle" aria-label="Open navigation" id="navToggle">☰</button>
-      <nav class="nav" id="nav">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="lookbook.html">Lookbook</a>
-        <a href="order-delivery.html">Order & Delivery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <h1>Modest • Cute • Comfortable</h1>
-        <p class="lead">Children's clothing and accessories — outfits for newborn to 16 years. Based in GRA, Katsina.</p>
-        <div class="hero-cta">
-          <a class="btn" href="shop.html">Shop Now</a>
-          <a class="btn outline" href="lookbook.html">See Lookbook</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap features">
-      <article class="feature">
-        <h3>High quality fabrics</h3>
-        <p>Soft, durable and kid-friendly materials.</p>
-      </article>
-      <article class="feature">
-        <h3>Nationwide delivery</h3>
-        <p>We ship across Nigeria — reliable & tracked.</p>
-      </article>
-      <article class="feature">
-        <h3>Easy ordering</h3>
-        <p>Order via WhatsApp or Linktree quickly.</p>
-      </article>
-    </section>
-
-    <section class="wrap preview-products">
-      <h2>Featured Items</h2>
-      <div class="product-grid">
-        <!-- Product cards — replace with real images & data -->
-        <article class="product">
-          <div class="product-thumb" aria-hidden="true"></div>
-          <h4>Classic Dress</h4>
-          <p class="price">₦2,800</p>
-          <a class="btn small" href="contact.html">Order</a>
-        </article>
-        <article class="product">
-          <div class="product-thumb" aria-hidden="true"></div>
-          <h4>School Outfit</h4>
-          <p class="price">₦1,900</p>
-          <a class="btn small" href="contact.html">Order</a>
-        </article>
-        <article class="product">
-          <div class="product-thumb" aria-hidden="true"></div>
-          <h4>Baby Set</h4>
-          <p class="price">₦3,200</p>
-          <a class="btn small" href="contact.html">Order</a>
-        </article>
-      </div>
-      <div style="text-align:center;margin-top:14px;">
-        <a class="btn" href="shop.html">View All</a>
-      </div>
-    </section>
-
-    <section class="wrap instagram-cta">
-      <h2>Follow us on Instagram</h2>
-      <p class="muted">@umm_zahra_boutique — latest styles, customer photos & updates</p>
-      <a class="btn outline" href="https://www.instagram.com/umm_zahra_boutique" target="_blank" rel="noopener">Open Instagram</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-left">
-        <strong>Umm Zahra Boutique</strong><br>
-        GRA Katsina — Nationwide delivery
-      </div>
-      <div class="footer-right">
-        <a href="links.html" class="link">Quick Links</a> · <a href="contact.html" class="link">Contact</a>
-      </div>
-    </div>
-    <small class="copyright">© 2025 Umm Zahra Boutique</small>
-  </footer>
-
-  <a class="whatsapp-fab" href="https://api.whatsapp.com/send?phone=2349017254986&text=Hello%20Umm%20Zahra%20Boutique!" target="_blank" aria-label="Chat on WhatsApp">💬</a>
-
-  <script src="script.js"></script>
-</body>
-          </html>
+<body><header>UMM ZAHRA BOUTIQUE ☰</header><nav>
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#lookbook">Lookbook</a>
+  <a href="#order">Order & Delivery</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav><!-- Contact Section --><section class="section" id="contact">
+  <h2>Contact Details</h2>
+  <p><strong>Call:</strong> 08036769094</p>
+  <p><strong>Email:</strong> rabeeatf@gmail.com</p>
+  <p><strong>WhatsApp:</strong> +234 901 725 4986</p>
+  <p><strong>Location:</strong> GRA Katsina, Katsina State</p>  <h3>Google Map</h3>
+  <iframe 
+    src="https://www.google.com/maps?q=GRA%20Katsina&output=embed" 
+    allowfullscreen>
+  </iframe>
+</section><!-- Floating CTA --><a class="floating-cta" href="https://api.whatsapp.com/send?phone=2349017254986&text=Hello!%20I%20want%20to%20order%20this%20product:" target="_blank">
+  Order Now
+</a><!-- Bottom Mobile Bar --><div class="mobile-bottom-bar">
+  <a href="#home"><img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png">Home</a>
+  <a href="#shop"><img src="https://cdn-icons-png.flaticon.com/512/711/711191.png">Shop</a>
+  <a href="https://api.whatsapp.com/send?phone=2349017254986" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WhatsApp</a>
+  <a href="#about"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828465.png">About</a>
+</div></body>
+</html>
